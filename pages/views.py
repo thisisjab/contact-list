@@ -1,5 +1,7 @@
-from django.views.generic import TemplateView
+from django.views.generic import ListView
+from .models import Contact
 
 
-class HomePageView(TemplateView):
+class HomePageView(ListView):
     template_name = 'index.html'
+    model = Contact
